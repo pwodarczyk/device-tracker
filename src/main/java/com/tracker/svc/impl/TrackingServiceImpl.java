@@ -35,7 +35,19 @@ public class TrackingServiceImpl implements ITrackingService {
 	@Autowired
 	public ProjectDAO projectDAO;
 
-	public Boolean checkOutDevice(Integer userId, Integer deviceId, Integer projectId) {
+	public Device getDeviceById(Integer id){
+		return deviceDAO.getById(id);
+	}
+	public CheckOutLog getCheckOutLogById(Integer id){
+		return checkOutLogDAO.getById(id);
+	}
+	public Project getProjectById(Integer id){
+		return projectDAO.getById(id);
+	}
+	public DeviceUser getDeviceUserById(Integer id){
+		return deviceUserDAO.getById(id);
+	}
+	public CheckOutLog checkOutDevice(Integer userId, Integer deviceId, Integer projectId) {
 
 		try {
 			Project project = projectDAO.getById(projectId);
@@ -50,13 +62,13 @@ public class TrackingServiceImpl implements ITrackingService {
 				col = checkOutLogDAO.save(col);
 				device.setCheckOutLog(col);
 				deviceDAO.save(device);
-				return true;
+				return col;
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
 
 	public Boolean checkInDevice(Integer logId) {
