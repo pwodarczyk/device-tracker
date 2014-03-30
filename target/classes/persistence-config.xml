@@ -60,11 +60,11 @@
 	<tx:annotation-driven transaction-manager="trackerTransactionManager"/>
 	
 
-	<bean id="trackerAbstractHibernateDAO" abstract="true" class="com.brakepartsinc.dao.TrackerAbstractHibernateDAO" />
-	<bean id="checkOutLogDao" parent="trackerAbstractHibernateDAO" class="com.brakepartsinc.dao.catalog.CheckOutLogDAO"/>
-	<bean id="deviceDao" parent="trackerAbstractHibernateDAO" class="com.brakepartsinc.dao.catalog.DeviceDAO"/>
-	<bean id="deviceUserDao" parent="trackerAbstractHibernateDAO" class="com.brakepartsinc.dao.catalog.DeviceUserDAO"/>
-	<bean id="projectDao"     parent="trackerAbstractHibernateDAO" class="com.brakepartsinc.dao.catalog.ProjectDAO" />
+	<bean id="trackerAbstractHibernateDAO" abstract="true" class="com.tacker.dao.TrackerAbstractHibernateDAO" />
+	<bean id="checkOutLogDao" parent="trackerAbstractHibernateDAO" class="com.tracker.dao.catalog.CheckOutLogDAO"/>
+	<bean id="deviceDao" parent="trackerAbstractHibernateDAO" class="com.tracker.dao.catalog.DeviceDAO"/>
+	<bean id="deviceUserDao" parent="trackerAbstractHibernateDAO" class="com.tracker.dao.catalog.DeviceUserDAO"/>
+	<bean id="projectDao"     parent="trackerAbstractHibernateDAO" class="com.tracker.dao.catalog.ProjectDAO" />
 	
 	
 <!-- 	<bean id="imageHostPath" class="com.brakepartsinc.util.ServerUtil"> -->

@@ -173,30 +173,16 @@ public class TrackerResource {
 
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	@Path("buyers")
-	public Result<Boolean> listBuyersGuide(@QueryParam("id") final String partNumber) {
-		// Result<Makes> result = new Result<Makes>();
-		// Map<String, String> terms = new HashMap<String, String>();
-		// terms.put("id", partNumber);
-		//
-		// BuyersGuide results = null;
-		// try {
-		// results = catalogService.listBuyersGuide(partNumber);
-		// }catch(Exception e) {
-		// e.printStackTrace();
-		// results = new BuyersGuide();
-		// }
-		//
-		// result.setTerms(terms);
-		// if(results !=null){
-		// result.setCount(results.getMakes().size());
-		// result.setResults(results.getMakes());
-		// }
-		// if(logger.isDebugEnabled())
-		// logger.debug(result.toString());
-		//
-		// return result;
-		return null;
+	@Path("status")
+	public Result<Boolean> listBuyersGuide() {
+		
+		Result<Boolean> result = new Result<Boolean>();
+		List<Boolean> results = new ArrayList<Boolean>();
+		results.add(true);
+		result.setCount(results.size());
+		result.setResults(results);
+		return result;
+			
 	}
 
 }

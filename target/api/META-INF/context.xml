@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context allowLinking="true" path="/api" reloadable="true" useHttpOnly="true">
-    <ResourceLink global="jdbc/bpi_ecommerce" name="jdbc/bpi_ecommerce" type="javax.sql.DataSource"/>
-    <ResourceLink global="jdbc/bpi_catalog" name="jdbc/bpi_catalog" type="javax.sql.DataSource"/>
+
 </Context>
